@@ -25,9 +25,11 @@ a {
     text-decoration: none;
 }
 
-P {
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* P {
+
+    font-family:  Helvetica, Arial, sans-serif;
+    
+} */
 
 /* end of main styles  */
 
@@ -82,7 +84,7 @@ P {
 /* end of my classes */
 
 
-/* login page */
+/* login component */
 main {
 
     height: 100vh;
@@ -245,8 +247,37 @@ span.sup:hover {
 }
 
 .row .col.form p.trust {
-    color: darkgrey;
-    margin: 0;
+    margin-top: 10px;
 }
-/* end of login page */
+
+.form div.trusted {
+    filter: grayscale(1);
+    width: 100%;
+    max-height: 20px;
+    justify-content: space-evenly;
+    display: flex;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: .25em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: .25em;
+  }
+/* end of login component */
 
