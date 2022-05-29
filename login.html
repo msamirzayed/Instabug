@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Task for Instabug">
+    <meta name="keywords" content="Instabug, Task, Pure CSS, Vanilla Javascript">
+    <meta name="author" content="Mahmoud Samir Zayed">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instabug | Login</title>
+    <link rel="shortcut icon" type="image/jpg" href="imgs/logo.png"/>
+    <!-- normalize css -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- end of normalize -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- external font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <!-- end of external font -->
+    <!-- font awesome library for the icons -->
+    <script
+      src="https://kit.fontawesome.com/51e364d4db.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- end of font awesome library -->
+</head>
+<body>
+    <main>
+            <div class="row flex-center">
+                <div class="col slider">
+
+                </div>
+                <div class="col form">
+                    <img src="imgs/logo.png" alt="">
+                    <h3>Log in to Instabug</h3>
+                    <button class="social google">Google</button>
+                    <button class="social github">Github</button>
+                    <button class="social microsoft">Microsoft</button>
+                    <hr>
+                    <form>
+                        <label for="email">Work Email</label><br>
+                        <input type="email" id="email" name="email" placeholder="mohamed@instabug.com"><br>
+                        <span> <label for="passowrd">Password</label> <label class="forget">forget password?</label><br></span>
+                        <input type="password" id="passowrd" name="passowrd" placeholder="+8 characters">
+                        <input class="submit" type="submit" value="Log in"></input>
+                        <span><p>Don't have an account? <span class="sup">Sign up</span></p> <p class="right">Login via SSO</p></span>
+                      </form>
+                      <p class="trust">Trusted by the top companies</p>
+                </div>
+            </div>
+       
+    </main>
+    <script src="src/app.js"></script>
+</body>
+</html>
