@@ -98,6 +98,7 @@ height: 100vh;
 
 }
 
+
 /* end of slider component */
 
 /* login form component */
@@ -116,7 +117,7 @@ height: 100vh;
 main .form h3 {
     
     font-size: 1.5rem;
-    color: var(--pri-color);
+    color: #445065;
     margin: 3px;
     
     }
@@ -260,6 +261,7 @@ button.social.microsoft::before {
  form label.forget {
      margin-left: auto;
      color: darkgrey;
+    
  }
  form label.forget:hover {
     
@@ -269,19 +271,21 @@ button.social.microsoft::before {
 
 form p.right {
     margin-left: auto;
-    color: darkgrey;
+    color: var(--sec-color);
 }
 form p.right:hover {
     margin-left: auto;
-    color: var(--sec-color);
+    color: darkgrey;
     cursor: pointer;
 }
 span.sup {
-    color: darkgrey;
+    color: var(--sec-color);
     display: inline;
 }
 span.sup:hover {
-    color: var(--sec-color);
+   
+    color: darkgrey;
+    cursor: pointer;
 }
 
 .row .col.form p.trust {
