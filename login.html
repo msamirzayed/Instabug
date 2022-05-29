@@ -27,35 +27,36 @@
 </head>
 <body>
     <main>
-            <div class="row flex-center">
-                <div class="col slider">
+    <div class="row flex-center">
+        <div class="col slider">
+        </div>
+        <div class="col form">
+            <img src="imgs/logo.png" alt="Instabug logo">
+            <h3>Log in to Instabug</h3>
+            <button class="social google">Google</button>
+            <button class="social github">Github</button>
+            <button class="social microsoft">Microsoft</button>
+            <div class="separator"><strong>OR</strong></div>
+            <form>
+                <label for="email">Work Email</label><br>
+                <input type="email" id="email" name="email" required placeholder="mohamed@instabug.com"><br>
+                <span> <label for="passowrd">Password</label> <label class="forget">forget password?</label><br></span>
+                <input type="password" required id="passowrd" name="passowrd" placeholder="+8 characters">
+                <input class="submit" type="submit" value="Log in"></input>
+                <span><p>Don't have an account? <span class="sup">Sign up</span></p> <p class="right">Login via SSO</p></span>
+              </form>
+              <p class="trust">Trusted by the top companies</p>
+              <div class="trusted">
+                <img src="imgs/Lyft_logo.svg" alt="Lyft logo">
+                <img src="imgs/BuzzFeed.svg" alt="Buzz Feed logo">
+                <img src="imgs/oneplus.svg" alt="One plus logo">
+                <img src="imgs/Asana_logo.svg" alt="Asana logo">
 
-                </div>
-                <div class="col form">
-                    <img src="imgs/logo.png" alt="Instabug logo">
-                    <h3>Log in to Instabug</h3>
-                    <button class="social google">Google</button>
-                    <button class="social github">Github</button>
-                    <button class="social microsoft">Microsoft</button>
-                    <div class="separator"><strong>OR</strong></div>
-                    <form>
-                        <label for="email">Work Email</label><br>
-                        <input type="email" id="email" name="email" required placeholder="mohamed@instabug.com"><br>
-                        <span> <label for="passowrd">Password</label> <label class="forget">forget password?</label><br></span>
-                        <input type="password" required id="passowrd" name="passowrd" placeholder="+8 characters">
-                        <input class="submit" type="submit" value="Log in"></input>
-                        <span><p>Don't have an account? <span class="sup">Sign up</span></p> <p class="right">Login via SSO</p></span>
-                      </form>
-                      <p class="trust">Trusted by the top companies</p>
-                      <div class="trusted">
-                        <img src="imgs/Lyft_logo.svg" alt="Lyft logo">
-                        <img src="imgs/BuzzFeed.svg" alt="Buzz Feed logo">
-                        <img src="imgs/oneplus.svg" alt="One plus logo">
-                        <img src="imgs/Asana_logo.svg" alt="Asana logo">
-
-                      </div>
-                </div>
-            </div>
+              </div>
+        </div>
+    </div>
+  
+ 
        
     </main>
     <script src="src/app.js"></script>
