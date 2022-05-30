@@ -257,6 +257,26 @@ button.social.microsoft::before {
     
  }
 
+ form input[type=email]:invalid:focus,input[type=password]:invalid:focus{
+
+  border-color: rgb(255, 0, 0);
+  box-shadow: inset 0 0 4px 0 rgb(192, 20, 20);
+  
+}
+
+ form .pswMsg{
+   color: #f00000;
+   font-family: 'Courier New', Courier, monospace;
+  
+ }
+
+ form .emMsg{
+  color: #f00000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
  form span {
     display: flex;
 }

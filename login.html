@@ -1,3 +1,6 @@
+<!-- simple note I've used imgs from Instabug website instead of the imgs in the task
+    because the links of the imgs don't work at all.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,12 +73,14 @@
               <div class="m">
                 <label for="email">Work Email</label><br>
                 <input type="email" id="email" name="email" required placeholder="mohamed@instabug.com"><br>
+                <div class="emMsg"></div>
               </div>
               <div class="p">
-                <span> <label for="passowrd">Password</label> <label class="forget">forget password?</label><br></span>
-                <input type="password" required id="passowrd" name="passowrd" placeholder="+8 characters">
+                <span> <label for="password">Password</label> <label class="forget">forget password?</label><br></span>
+                <input type="password" required id="password" name="passowrd" minlength="6" placeholder="+6 characters">
+                <div class="pswMsg"></div>
               </div>
-                <button class="submit" type="submit" value="Log in" disabled>Log in</button>
+                <button class="submit" type="submit" value="Log in">Log in</button>
                 <span><p>Don't have an account? <span class="sup">Sign up</span></p> <p class="right">Login via SSO</p></span>
               </form>
               <p class="trust">Trusted by the top companies</p>
