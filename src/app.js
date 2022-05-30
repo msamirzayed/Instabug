@@ -3,7 +3,7 @@ let auth = false;
 
 document.addEventListener("DOMContentLoaded", function () {
   currentPath = window.location.pathname;
-  console.log(window.location.hostname + "/login.html");
+  console.log("/login.html");
   if (!localStorage.getItem("userID")) {
     auth = false;
     login();
@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function login() {
   if (currentPath != "/login.html" && currentPath != "/error.html") {
-    window.location.replace(window.location.hostname + "/login.html");
-    console.log(window.location.hostname + "/login.html");
+    window.location.replace("/login.html");
+    console.log("/login.html");
   }
 }
 
 function welcome(user) {
   if (auth == true && currentPath != "/") {
-    window.location.replace(window.location.hostname + "/");
+    window.location.replace("/");
   }
   console.log("welcome " + user);
 }

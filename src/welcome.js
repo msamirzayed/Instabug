@@ -1,3 +1,4 @@
+let name = document.querySelector(".name");
 document.addEventListener("DOMContentLoaded", function () {
   currentPath = window.location.pathname;
   if (!localStorage.getItem("userID")) {
@@ -10,12 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function welcome(user) {
   if (auth == true && currentPath != "/") {
-    window.location.replace(window.location.hostname + "/");
+    window.location.replace("/");
   }
-  console.log("welcome " + user);
+  name.textContent = `Welcome ${localStorage.getItem("userID")}`;
 }
 
 function logout() {
   localStorage.removeItem("userID");
-  window.location.replace(window.location.hostname + "/login.html");
+  window.location.replace("/login.html");
 }
