@@ -13,6 +13,12 @@ height: 100vh;
 background-image: -webkit-gradient(linear, left top, right top, from(#000b20), to(#002166));
 }
 
+@media (max-width:768px) {
+    main .row .col.slider {
+        width: 100%;
+    }
+}
+
 
  .container-slider {
     max-width: 800px;
@@ -102,6 +108,13 @@ height: 100vh;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
+
+@media (max-width:768px) {
+    main .row .col.form {
+        width: 100%;
+    }
+}
+
 
 main .form h3 {
     
