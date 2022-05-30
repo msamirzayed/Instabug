@@ -16,4 +16,7 @@ function login() {
   console.log("login function");
 }
 
-function welcome(user) {}
+function welcome(user) {
+  if (auth == true && window.location.href.includes("index.html") != true)
+    window.location.href = "index.html";
+}

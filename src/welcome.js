@@ -14,4 +14,7 @@ function welcome(user) {
 
 function logout() {
   localStorage.removeItem("userID");
+  auth = false;
+  if (auth == false && window.location.href.includes("login.html") != true)
+    window.location.href = "login.html";
 }
