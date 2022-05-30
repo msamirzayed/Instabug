@@ -149,7 +149,7 @@ button.social.google {
 }
 button.social.google::before {
     content: '';
-    background: url("/imgs/Google-Logo.png");
+    background: url("../imgs/Google-Logo.png");
     background-size: cover;
     position: absolute;
     left: 1px;
@@ -177,7 +177,7 @@ button.social.microsoft {
 }
 button.social.microsoft::before {
     content: '';
-    background: url("/imgs/Microsoft-Logo.png");
+    background: url("../imgs/Microsoft-Logo.png");
     background-size: cover;
     position: absolute;
     left: -20px;
