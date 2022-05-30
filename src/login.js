@@ -91,11 +91,9 @@ function check(mail, pass) {
     if (e.email == mail && e.password == pass) {
       localStorage.setItem("userID", mail);
       console.log("added");
-      auth = true;
       hidden.style.display = "none";
     } else if (e.email != mail && e.password != pass) {
       console.log("no matched user in the db");
-      auth = false;
       hidden.style.display = "block";
     }
   });
