@@ -92,7 +92,6 @@ function check(mail, pass) {
       localStorage.setItem("userID", mail);
       console.log("added");
       hidden.style.display = "none";
-      window.location.replace("/");
     } else if (e.email != mail && e.password != pass) {
       console.log("no matched user in the db");
       hidden.style.display = "block";

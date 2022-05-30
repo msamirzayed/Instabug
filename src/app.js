@@ -1,6 +1,5 @@
 // redirection
 let auth = false;
-
 document.addEventListener("DOMContentLoaded", function () {
   currentPath = window.location.pathname;
   if (!localStorage.getItem("userID")) {
