@@ -1,23 +1,31 @@
 // redirection
 let auth = false;
-
 document.addEventListener("DOMContentLoaded", function () {
-  if (!localStorage.getItem("userID")) {
+  const userId = localStorage.getItem("userID");
+  if (!userId) {
     auth = false;
     login();
-  } else if (localStorage.getItem("userID")) {
+  } else if (userId) {
     auth = true;
-    welcome(localStorage.getItem("userID"));
+    welcome(userId);
   }
 });
 
 function login() {
-  if (auth == false && window.location.href.includes("login.html") != true)
-    window.location.href = "login.html";
-  console.log("login function");
+  const loginUri = "login.html";
+  const errorUri = "error.html";
+  const notAuth = auth === false;
+  const isLoginPage = window.location.href.includes(loginUri);
+  const errorPage = window.location.href.includes(errorUri);
+  if (notAuth && !isLoginPage && !errorPage) window.location.href = loginUri;
 }
 
 function welcome(user) {
-  if (auth == true && window.location.href.includes("index.html") != true)
-    window.location.href = "index.html";
+  const loginUri = "index.html";
+  const errorUri = "error.html";
+  const notAuth = auth === false;
+  const isLoginPage = window.location.href.includes(loginUri);
+  const errorPage = window.location.href.includes(errorUri);
+
+  if (!notAuth && !isLoginPage && !errorPage) window.location.href = loginUri;
 }

@@ -25,28 +25,19 @@ form.addEventListener("submit", (e) => {
 });
 
 checkInputs(emInput.value, pswInput.value);
-
 // check on every keyup listner
-
-pswInput.addEventListener("keyup", () => {
+const passwordValidatorListner = () => {
   pswMsg.innerHTML = ` ${validatePassword(pswInput.value)}`;
   checkInputs(emInput.value, pswInput.value);
-});
-
-pswInput.addEventListener("focusout", () => {
-  pswMsg.innerHTML = ` ${validatePassword(pswInput.value)}`;
-  checkInputs(emInput.value, pswInput.value);
-});
-
-emInput.addEventListener("keyup", () => {
+};
+const emailValidatorListner = () => {
   emMsg.innerHTML = ` ${validateEmail(emInput.value)}`;
   checkInputs(emInput.value, pswInput.value);
-});
-
-emInput.addEventListener("focusout", () => {
-  emMsg.innerHTML = ` ${validateEmail(emInput.value)}`;
-  checkInputs(emInput.value, pswInput.value);
-});
+}
+pswInput.addEventListener("keyup", passwordValidatorListner);
+pswInput.addEventListener("focusout", passwordValidatorListner);
+emInput.addEventListener("keyup", emailValidatorListner);
+emInput.addEventListener("focusout",emailValidatorListner);
 
 // validating inputs and form
 
@@ -87,16 +78,17 @@ function checkInputs(email, password) {
 }
 
 function check(mail, pass) {
-  users.forEach((e) => {
-    if (e.email == mail && e.password == pass) {
-      localStorage.setItem("userID", mail);
-      console.log("added");
-      hidden.style.display = "none";
-      if (window.location.href.includes("index.html") != true)
-        window.location.href = "index.html";
-    } else if (e.email != mail && e.password != pass) {
-      console.log("no matched user in the db");
-      hidden.style.display = "block";
-    }
+  const user = users.find((e) => {
+    return e.email == mail && e.password == pass;
   });
+  if (user) {
+    localStorage.setItem("userID", user.email);
+    console.log("added");
+    hidden.style.display = "none";
+    if (window.location.href.includes("index.html") != true)
+      window.location.href = "index.html";
+  } else {
+    console.log("no matched user in the db");
+    hidden.style.display = "block";
+  }
 }
