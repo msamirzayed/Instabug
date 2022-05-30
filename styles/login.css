@@ -3,6 +3,7 @@
 main {
 
     height: 100vh;
+    
 }
 
 /* slider component */
@@ -27,6 +28,7 @@ background-image: -webkit-gradient(linear, left top, right top, from(#000b20), t
     margin: auto;
     color: white;
     font-size: large;
+    animation: fade 0.5s;
   }
   
   
@@ -106,6 +108,7 @@ main .row .col.form {
 width: 50%;
 height: 100vh;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+overflow: hidden;
 
 }
 
@@ -240,6 +243,7 @@ button.social.microsoft::before {
     cursor: not-allowed;
   }
 
+
  form input[type=email],input[type=password]{
     width: 100%;
     padding: 12px 20px;
@@ -321,6 +325,18 @@ span.sup:hover {
     max-height: 20px;
     justify-content: space-evenly;
     display: flex;
+}
+
+.form div.hidden {
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  border-color: rgb(255, 0, 0);
+  box-shadow: inset 0 0 10px 0 rgb(192 20 20);
+  color: #c40e0e;
+  padding: 1px;
+  font-family: 'Ubuntu Mono', monospace;
+  display: none;
 }
 
 /* end of login component */

@@ -9,82 +9,49 @@ const users = [
   { email: "mohamed7@instabug.com", password: "A12345678" },
 ];
 
-let userMail = "";
-let userPass = "";
-let auth = false;
-let currentPath = "";
 let emInput = document.querySelector("#email");
 let emMsg = document.querySelector(".emMsg");
 let pswInput = document.querySelector("#password");
 let pswMsg = document.querySelector(".pswMsg");
 const btnSubmit = document.querySelector(".submit");
-btnSubmit.disabled = false;
+const form = document.querySelector("form");
+const hidden = document.querySelector(".hidden");
 
 // checking user inputs and alerting
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  checkInputs(emInput.value, pswInput.value);
+  check(emInput.value, pswInput.value);
+});
 
-pswInput.addEventListener("keydown", () => {
+checkInputs(emInput.value, pswInput.value);
+
+// check on every keyup listner
+
+pswInput.addEventListener("keyup", () => {
   pswMsg.innerHTML = ` ${validatePassword(pswInput.value)}`;
+  checkInputs(emInput.value, pswInput.value);
 });
 
 pswInput.addEventListener("focusout", () => {
   pswMsg.innerHTML = ` ${validatePassword(pswInput.value)}`;
+  checkInputs(emInput.value, pswInput.value);
 });
 
-emInput.addEventListener("keydown", () => {
+emInput.addEventListener("keyup", () => {
   emMsg.innerHTML = ` ${validateEmail(emInput.value)}`;
+  checkInputs(emInput.value, pswInput.value);
 });
 
 emInput.addEventListener("focusout", () => {
   emMsg.innerHTML = ` ${validateEmail(emInput.value)}`;
-});
-
-// redirection
-
-function login() {
-  if (currentPath != "/login.html" && currentPath != "/error.html") {
-    window.location.replace("/login.html");
-  }
-  check();
-}
-
-function logout() {
-  localStorage.removeItem("userID", userMail);
-}
-
-function check() {
-  users.filter((e) => {
-    if (e.email == userMail && e.password == userPass) {
-      localStorage.setItem("userID", userMail);
-      auth = true;
-    } else {
-      console.log("no matched user in the db");
-    }
-  });
-}
-
-function welcome(user) {
-  if (auth == true && currentPath != "/") {
-    window.location.replace("/");
-  }
-  console.log("welcome " + user);
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  currentPath = window.location.pathname;
-  if (!localStorage.getItem("userID")) {
-    auth = false;
-    login();
-  } else if (localStorage.getItem("userID")) {
-    auth = true;
-    welcome(localStorage.getItem("userID"));
-  }
+  checkInputs(emInput.value, pswInput.value);
 });
 
 // validating inputs and form
 
 function validatePassword(password) {
   if (!password) return "Password is required";
-
   if (password.length < 6) {
     return `Please enter a password that's at least 6 characters long`;
   }
@@ -105,9 +72,62 @@ function validatePassword(password) {
 function validateEmail(email) {
   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!isValidEmail.test(email)) {
-    console.log(email);
     return "Please enter a valid email";
   }
 
   return "";
 }
+
+function checkInputs(email, password) {
+  if (validateEmail(email) == "" && validatePassword(password) == "") {
+    btnSubmit.disabled = false;
+  } else {
+    btnSubmit.disabled = true;
+  }
+}
+
+function check(mail, pass) {
+  users.forEach((e) => {
+    if (e.email == mail && e.password == pass) {
+      localStorage.setItem("userID", mail);
+      console.log("added");
+      auth = true;
+      hidden.style.display = "none";
+    } else if (e.email != mail && e.password != pass) {
+      console.log("no matched user in the db");
+      auth = false;
+      hidden.style.display = "block";
+    }
+  });
+}
+
+// redication
+
+// // redirection
+// document.addEventListener("DOMContentLoaded", function () {
+//   currentPath = window.location.pathname;
+//   if (!localStorage.getItem("userID")) {
+//     auth = false;
+//     login();
+//   } else if (localStorage.getItem("userID")) {
+//     auth = true;
+//     welcome(localStorage.getItem("userID"));
+//   }
+// });
+
+// function login() {
+//   if (currentPath != "/login.html" && currentPath != "/error.html") {
+//     window.location.replace("/login.html");
+//   }
+// }
+
+// function logout() {
+//   localStorage.removeItem("userID", userMail);
+// }
+
+// function welcome(user) {
+//   if (auth == true && currentPath != "/") {
+//     window.location.replace("/");
+//   }
+//   console.log("welcome " + user);
+// }
