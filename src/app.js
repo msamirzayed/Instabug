@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   currentLoc = currentHost + currentPath;
   console.log(window.location);
   console.log(currentLoc);
-  window.location.replace(currentLoc);
+  window.location.replace("Instabug/" + currentLoc);
   console.log("/login.html");
   if (!localStorage.getItem("userID")) {
     auth = false;
