@@ -21,12 +21,3 @@ function welcome(user) {
   if (auth == true && window.location.href.includes("index.html") != true)
     window.location.href = "index.html";
 }
-
-let url = window.location.href;
-
-xhr = new XMLHttpRequest();
-xhr.open("GET", url, true);
-
-xhr.onloadend = function () {
-  if (this.status == 404) throw new Error(url + " ssssssssssssssssss 404");
-};
