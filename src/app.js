@@ -3,6 +3,11 @@ let auth = false;
 
 document.addEventListener("DOMContentLoaded", function () {
   currentPath = window.location.pathname;
+  currentHost = window.location.host;
+  currentLoc = currentHost + currentPath;
+  console.log(window.location);
+  console.log(currentLoc);
+  window.location.replace(currentLoc);
   console.log("/login.html");
   if (!localStorage.getItem("userID")) {
     auth = false;
