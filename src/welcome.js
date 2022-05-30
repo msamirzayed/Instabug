@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function welcome(user) {
   if (auth == true && currentPath != "/") {
-    window.location.replace("/");
+    window.location.replace(window.location.hostname + "/");
   }
   console.log("welcome " + user);
 }
 
 function logout() {
   localStorage.removeItem("userID");
-  window.location.replace("/login.html");
+  window.location.replace(window.location.hostname + "/login.html");
 }
