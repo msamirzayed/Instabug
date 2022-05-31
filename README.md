@@ -4,10 +4,10 @@
   cause I used only Vanilla Javascript for the functionality part I did the redirecting part without the wildcard option.
  - also there some points aren't very clear such as the design should be responsive or not but I've made it responsive any way.
   
-# Preview to the website on github pages
+# Preview the website on github pages
 https://msamirzayed.github.io/Instabug
 
-## all of the functionality was made just by Vanilla Javascript 
+## all the functionality was made just by Vanilla Javascript 
 
 ## all of the Ui design was made by pure css
 
