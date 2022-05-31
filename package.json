@@ -1,0 +1,23 @@
+{
+  "name": "instabug",
+  "version": "1.0.0",
+  "description": "simple task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msamirzayed/Instabug.git"
+  },
+  "author": "mahmoud samir zayed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msamirzayed/Instabug/issues"
+  },
+  "homepage": "https://github.com/msamirzayed/Instabug#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  }
+}
