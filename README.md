@@ -2,7 +2,6 @@
 - as for the redirecting 404 page part I could've made it using SPA library or a framework such as Angular
   making a wildcard option for the routes that don't match the paths provided * but due to lack of time &
   cause I used only Vanilla Javascript for the functionality part, I did the redirecting rules part without the wildcard option.
- - also there are some points were not very clear such as the design should be responsive or not but I've made it responsive any way.
   
 # Preview the website on github pages
 https://msamirzayed.github.io/Instabug
